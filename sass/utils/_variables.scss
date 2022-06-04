@@ -1,0 +1,51 @@
+:root {
+    // colors
+    --white-color: #ffffff;
+    --primary-text-color: rgba(33, 33, 33, 1);
+    --secondary-text-color: rgba(117, 117, 117, 1);
+    --accent-color: rgba(33, 150, 243, 1);
+    --logo-studio-color: #000000;
+    --background-hero: rgba(47, 48, 58, 1);
+    --background-section-team: #F5F4FA;
+    --footer-background-color: rgba(47, 48, 58, 1);
+    --address-links-color: rgba(255, 255, 255, 0.6);
+    --backgroung-buttons-color: rgba(245, 244, 250, 1);
+    --primary-buttons-text-color: rgba(33, 33, 33, 1);
+    --background-for-button: #188CE8;
+    --border-color-cards: rgba(238, 238, 238, 1);
+    --border-for-header: rgba(236, 236, 236, 1);
+    --button-active-color: rgba(245, 244, 250, 1);
+    --color-for-team-cards: rgba(255, 255, 255, 1);
+    --gradient-color: rgba(47, 48, 58, 0.4) 35%;
+    --background-features-card: #F5F4FA;
+    --color-for-join: rgba(255, 255, 255, 1);
+    --icon-color: rgba(175, 177, 184, 1);
+    --color-for-links: rgba(255, 255, 255, 1);
+    --icon-background-color: rgba(255, 255, 255, .1);
+    --overlay-color: rgba(0, 0, 0, 0.2);
+    --modal-window-color: rgba(255, 255, 255, 1);
+    --activity-cards-text-color: rgba(255, 255, 255, 1);
+    --activity-cards-background: rgba(47, 48, 58, 0.8);
+    --ovarlay-examples-cards-color: rgba(33, 150, 243, 0.9);
+    --overlay-examples-text-color: rgba(255, 255, 255, 1);
+    --close-button-color: #000000;
+    --subscribe-title-color: rgba(255, 255, 255, 1);
+    --subscribe-button-color: rgba(255, 255, 255, 1);
+    --subscribe-button-box-shadow: rgba(0, 0, 0, 0.15);
+    --subscribe-button-background-color: rgba(33, 150, 243, 1);
+    --subscribe-button-hover-background-color: #188ce8;
+    --subscribe-icon-color: rgba(255, 255, 255, 1);
+    --subscribe-input-text-color: rgba(255, 255, 255, 0.6);
+    --callback-title-color: rgba(33, 33, 33, 1);
+    --callback-form-lable-color: rgba(117, 117, 117, 1);
+    --callback-form-input-border-color: rgba(33, 33, 33, 0.2);
+    --callback-agreenamt-link-color: rgba(33, 150, 243, 1);
+    --callbackform-agreemant-text: rgba(117, 117, 117, 1);
+    --call-back-form-checkbox-border-color: rgba(33, 33, 33, 1);
+    --checkbox-button-hover-color: #188ce8;
+    // fonts
+    --main-font: Roboto,sans-serif;
+    --logo-font: Raleway,sans-serif;
+
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
