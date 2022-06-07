@@ -17,46 +17,71 @@
     <!-- шапка -->
     <header class="header">
       <div class="container header__wrapper">
+        <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
+        <button class="header-button__burger" aria-expanded="false" type="button" data-menu-button>
+          <svg class="header-button__icon" width="40" height="40">
+            <use class="header-button__icon--open" href="./images/icons.svg#icon-menu-open"></use>
+            <use class="header-button__icon--close" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
         <!-- навигация -->
-        <nav class="header__nav">
-          <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link site-nav__link--current">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="auth-nav">
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="info@devstudio.com">
-              <svg class="auth-nav__icon-envelope" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="tel:+380961111111">
-              <svg class="auth-nav__icon-smartphone" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="header__menu-container" data-menu>
+          <nav class="header-nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link site-nav__link--current">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__info-container">
+            <ul class="auth-nav">
+              <li class="auth-nav__item">
+                <a class="auth-nav__link auth-nav__link--large" href="tel:+380961111111">
+                  <svg class="auth-nav__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="auth-nav__item">
+                <a class="auth-nav__link" href="info@devstudio.com">
+                  <svg class="auth-nav__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="header-social">
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Twitter</a>
+              </li>
+
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- основное -->
     <main>
       <!-- секция c кнопкой -->
       <section class="hero">
-        <div class="container">
+        <div class="container hero__container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
         </div>
@@ -65,7 +90,7 @@
       <section class="features section">
         <div class="container">
           <h2 class="title-hidden">Особенности команды WebStudio</h2>
-          <ul class="features__wrapper">
+          <ul class="features__list">
             <li class="features__item details-icon">
               <div class="features__icon">
                 <svg width="70" height="70">
@@ -120,37 +145,55 @@
           <ul class="activity__wrapper">
             <li class="activity__item">
               <div class="activity__wrap">
-                <img
-                  class="activity__picture"
-                  src="./images/box1.jpg"
-                  alt="Фронтенд разработка"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/activity-desktop.jpg 1x, ./images/activity-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="activity__picture"
+                    src="./images/activity-desktop.jpg"
+                    alt="Разработка десктопных приложений"
+                  />
+                </picture>
                 <p class="activity__description">Десктопные приложения</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__wrap">
-                <img
-                  class="activity__picture"
-                  src="./images/box2.jpg"
-                  alt="Разработка пользовательского интерфейса"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activity-mob-desktop.jpg    1x,
+                      ./images/activity-mob-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="activity__picture"
+                    src="./images/activity-mob-desktop.jpg"
+                    alt="Разработка пользовательского интерфейса"
+                  />
+                </picture>
                 <p class="activity__description">Мобильные приложения</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__wrap">
-                <img
-                  class="activity__picture"
-                  src="./images/box3.jpg"
-                  alt="Дизайн продукта"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activity-design-desktop.jpg    1x,
+                      ./images/activity-design-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="activity__picture"
+                    src="./images/activity-design-desktop.jpg"
+                    alt="Дизайнерские решения"
+                  />
+                </picture>
                 <p class="activity__description">Дизайнерские решения</p>
               </div>
             </li>
@@ -161,15 +204,31 @@
       <section class="team section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__wrapper">
+          <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/product-designer.jpg"
-                alt="Человек, который формирует концепцию продукта"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product-designer-mobile.jpg    1x,
+                    ./images/product-designer-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/product-designer-desktop.jpg x1, ./images/product-designer-desktop@2x x2"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/product-designer-tablet.jpg x1, ./images/product-designer-tablet@2x x2"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="team-picture"
+                  src="./images/product-designer-tablet.jpg"
+                  alt="Человек, который формирует концепцию продукта"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__role">Product Designer</p>
@@ -206,13 +265,29 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/front-end-developer.jpg"
-                alt="Человек, который занимается созданием веб-сайтов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/front-end-developer-mobile.jpg    1x,
+                    ./images/front-end-developer-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/front-end-developer-desktop.jpg x1, ./images/front-end-developer-desktop@2x x2"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/front-end-developer-tablet x1, ./images/front-end-developer-tablet@2x x2"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="team-picture"
+                  src="./images/front-end-developer-tablet.jpg"
+                  alt="Человек, который занимается созданием веб-сайтов"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__role">Frontend Developer</p>
@@ -249,13 +324,29 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/marketing.jpg"
-                alt="Человек, отвечающий за маркетинг"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/merketing-mobile.jpg           1x,
+                    ./images/product-designer-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/marketing-desktop.jpg x1, ./images/marketing-desktop@2x x2"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/marketing-tablet.jpg x1, ./images/marketing-tablet@2x x2"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="team-picture"
+                  src="./images/marketing-tablet.jpg"
+                  alt="Человек, отвечающий за маркетинг"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__role">Marketing</p>
@@ -292,13 +383,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__picture"
-                src="./images/ui-designer.jpg"
-                alt="Человек, работающий над графической частью интерфейса"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/UI-designer-mobile.jpg 1x, ./images/UI-designer-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/UI-designer-desktop x1, ./images/UI-designer-desktop@2x x2"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/UI-designer-tablet.jpg x1, ./images/UI-designer-tablet@2x x2"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="team-picture"
+                  src="./images/UI-designer-tablet.jpg"
+                  alt="Человек, работающий над графической частью интерфейса"
+                />
+              </picture>
               <div class="team__card">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__role">UI Designer</p>
@@ -341,7 +445,7 @@
       <section class="clients section">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
-          <ul class="clients__wrapper">
+          <ul class="clients__list">
             <li class="clients__item">
               <a class="clients__link" href="#">
                 <svg class="clients__icon" width="106" height="60">
@@ -391,7 +495,7 @@
     <!-- футер -->
     <footer class="footer">
       <div class="container footer__wrapper">
-        <div>
+        <div class="address__wrapper">
           <a class="logo logo__footer" href="./index.html"
             >Web<span class="logo--white">Studio</span></a
           >
@@ -522,5 +626,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

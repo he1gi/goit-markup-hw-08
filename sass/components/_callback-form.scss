@@ -1,8 +1,12 @@
 .callback-form {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     padding: 40px;
+
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .callback-form__title {
@@ -15,6 +19,10 @@
     text-align: center;
 
     color: var(--callback-title-color);
+
+    @media screen and (max-width: 1199px) {
+        line-height: 1.5;
+    }
 }
 
 .callback-form__lable {
@@ -65,7 +73,7 @@
     transition: border-color 250ms var(--timing-function);
 
     padding: 12px 16px;
-    width: 448px;
+    width: 100%;
     height: 120px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -89,3 +97,47 @@
     }
 }
 
+.callback-form__agreement-text {
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: var(--callbackform-agreemant-text);
+}
+
+.callback-form__agreement-link {
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+    color: var(--callback-agreenamt-link-color);
+}
+
+.callback-form__button {
+    transition: background-color 250ms var(--timing-function);
+
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 100%;
+    max-width: 200px;
+    background-color: rgba(33, 150, 243, 1);
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--white-color);
+    letter-spacing: 0.06em;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        background-color: var(--checkbox-button-hover-color);
+    }
+
+
+}

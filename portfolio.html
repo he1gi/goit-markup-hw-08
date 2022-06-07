@@ -17,39 +17,64 @@
     <!-- шапка -->
     <header class="header">
       <div class="container header__wrapper">
+        <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
+        <button class="header-button__burger" aria-expanded="false" type="button" data-menu-button>
+          <svg class="header-button__icon" width="40" height="40">
+            <use class="header-button__icon--open" href="./images/icons.svg#icon-menu-open"></use>
+            <use class="header-button__icon--close" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
         <!-- навигация -->
-        <nav class="header__nav">
-          <a href="#" class="logo">Web<span class="logo--black">Studio</span></a>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link site-nav__link--current">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="auth-nav">
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="info@devstudio.com">
-              <svg class="auth-nav__icon-envelope" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="tel:+380961111111">
-              <svg class="auth-nav__icon-smartphone" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="header__menu-container" data-menu>
+          <nav class="header-nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link site-nav__link--current">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__info-container">
+            <ul class="auth-nav">
+              <li class="auth-nav__item">
+                <a class="auth-nav__link auth-nav__link--large" href="tel:+380961111111">
+                  <svg class="auth-nav__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="auth-nav__item">
+                <a class="auth-nav__link" href="info@devstudio.com">
+                  <svg class="auth-nav__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="header-social">
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Twitter</a>
+              </li>
+
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- основное -->
@@ -79,13 +104,35 @@
             <li class="examples__item">
               <a class="examples__link" href="#">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/texnokryak.jpg"
-                    alt="Пример проекта веб-сайта Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/technokriak-mobile.jpg    1x,
+                        ./images/technokriak-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tachnokriak-desktop.jpg    1x,
+                        ./images/technokriak-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokriak-tablet.jpg    1x,
+                        ./images/technokriac-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/technokriak-tablet.jpg"
+                      alt="Пример проекта веб-сайта Технокряк"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -101,13 +148,35 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/post-new-orlean-golden-star.jpg"
-                    alt="Пример дизайна постера New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/new-orlean-mobile.jpg    1x,
+                        ./images/new-orlean-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new-orlean-desktop.jpg    1x,
+                        ./images/new-orlean-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new-orlean-tablet.jpg    1x,
+                        ./images/new-orlean-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/new-orlean-tablet.jpg"
+                      alt="Пример дизайна постера New Orlean vs Golden Star"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -123,13 +192,26 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/restaurant-seafood.jpg"
-                    alt="Пример приложения для ресторана Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/seafood-mobile.jpg 1x, ./images/seafood-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/sea-food-desktop.jpg 1x, ./images/sea-food-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/seafood-tablet.jpg 1x, ./images/seafood-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/seafood-tablet.jpg"
+                      alt="Пример приложения для ресторана Seafood"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -145,13 +227,26 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/project-prime.jpg"
-                    alt="Пример проекта Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/prime-mobile.jpg 1x, ./images/prime-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/prime-desktop.jpg 1x, ./images/prime-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/prime-tablet.jpg 1x, ./images/prime-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/prime-tablet.jpg"
+                      alt="Пример проекта Prime"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -167,13 +262,26 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/project-boxes.jpg"
-                    alt="Проект приложения Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/boxes-mobile.jpg 1x, ./images/boxes-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/boxes-desktop.jpg 1x, ./images/boxes-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/boxes-tablet.jpg 1x, ./images/boxes-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/boxes-tablet.jpg"
+                      alt="Проект приложения Boxes"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -189,13 +297,35 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/inspiration-has-a-borders.jpg"
-                    alt="Проект веб-сайта Inspiration has no borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/inspiration-mobile.jpg    1x,
+                        ./images/inspiration-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-desktop.jpg    1x,
+                        ./images/inspiration-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-tablet.jpg    1x,
+                        ./images/inspiration-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/inspiration-tablet.jpg"
+                      alt="Проект веб-сайта Inspiration has no borders"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -211,13 +341,26 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/limited-edition.jpg"
-                    alt="Пример дизайна издания Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/limited-mobile.jpg 1x, ./images/limited-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/limited-desktop.jpg 1x, ./images/limited-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/limited-tablet.jpg 1x, ./images/limited-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/limited-table.jpg"
+                      alt="Пример дизайна издания Limited Edition"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -233,13 +376,26 @@
             <li class="examples__item">
               <a href="#" class="examples__link">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/project-lab.jpg"
-                    alt="Пример проекта LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/lab-mobile.jpg 1x, ./images/lab-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="./images/lab-desktop.jpg 1x, ./images/lab-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/lab-tablet.jpg 1x, ./images/lab-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/lab-tablet.jpg"
+                      alt="Пример проекта LAB"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -255,13 +411,35 @@
             <li class="examples__item">
               <a class="examples__link" href="#">
                 <div class="examples__overlay">
-                  <img
-                    class="examples__picture"
-                    src="./images/growing-business.jpg"
-                    alt="Проект приложения Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/growing-business-mobile.jpg    1x,
+                        ./images/growing-business-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-desktop.jpg   1x,
+                        ./images/growing-business-desktop@2xjpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-tablet.jpg    1x,
+                        ./images/growing-business-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="examples-picture"
+                      src="./images/growing-business-tablet.jpg"
+                      alt="Проект приложения Growing Business"
+                    />
+                  </picture>
                   <p class="overlay__text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -281,7 +459,7 @@
     <!-- футер -->
     <footer class="footer">
       <div class="container footer__wrapper">
-        <div>
+        <div class="address__wrapper">
           <a class="logo logo__footer" href="./index.html"
             >Web<span class="logo--white">Studio</span></a
           >
@@ -353,5 +531,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
