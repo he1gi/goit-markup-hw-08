@@ -451,6 +451,7 @@ body.modal-open {
 }
 
 .header-button__burger.is-open {
+  position: fixed;
   top: 10px;
   right: 15px;
   padding: 0;
