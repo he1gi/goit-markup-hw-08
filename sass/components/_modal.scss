@@ -1,5 +1,6 @@
 .backdrop {
     position: fixed;
+    z-index: 100;
 
     transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 
