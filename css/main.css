@@ -507,6 +507,10 @@ body.modal-open {
   }
 }
 
+.header-nav {
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
   .header-nav {
     margin-left: 88px;
@@ -758,8 +762,9 @@ body.modal-open {
 .hero {
   margin-left: auto;
   margin-right: auto;
+  max-width: 1600px;
   background-color: var(--background-hero);
-  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-480.jpg);
+  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -767,32 +772,31 @@ body.modal-open {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-960.jpg);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-960.jpg");
   }
 }
 
 @media screen and (min-width: 481px) {
   .hero {
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-768.jpg);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-768.jpg)");
   }
 }
 
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-1536.jpg);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-1536.jpg");
   }
 }
 
 @media screen and (min-width: 769px) {
   .hero {
-    max-width: 1600px;
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-1600.jpg);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-1600.jpg");
   }
 }
 
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url(../../images/background-image-3200.jpg);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/background-image-3200.jpg");
   }
 }
 
@@ -1135,8 +1139,14 @@ body.modal-open {
 
 .clients__item {
   height: 92px;
-  flex-basis: calc( 100% / 2 - 30px);
   margin: 15px;
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .clients__item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1621,7 +1631,7 @@ body.modal-open {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1640,7 +1650,7 @@ body.modal-open {
   margin-right: 8px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
   .filters__item {
     margin-bottom: 15px;
   }
@@ -1748,6 +1758,9 @@ body.modal-open {
 
 .examples__picture {
   display: block;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .examples__card {
