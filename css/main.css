@@ -432,7 +432,6 @@ body.modal-open {
 }
 
 .header-button__burger {
-  position: absolute;
   right: 0px;
   border: none;
   background-color: transparent;
@@ -452,9 +451,9 @@ body.modal-open {
 }
 
 .header-button__burger.is-open {
-  position: fixed;
   top: 10px;
   right: 15px;
+  padding: 0;
 }
 
 .header-button__icon {
